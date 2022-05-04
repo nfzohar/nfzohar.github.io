@@ -1,5 +1,5 @@
 var word_list = [];
-var try_number = 0;
+var try_number = 1;
 var selected_word = chooseRandomWord();
 
 // Main function.
