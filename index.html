@@ -8,62 +8,45 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        header,
-        footer,
-        main {
-            font-family: arial;
-            font-size: 100%;
-            width: 50%;
-            text-align: center;
-            margin-top: 2%;
-            margin-left: 25%;
-            margin-right: 25%;
-        }
-        
-        header {
-            font-size: 200%;
-        }
-        
-        .app_link {
-            margin: auto;
-            display: block;
-            width: 60%;
-            margin-top: 1%;
-            text-decoration: none;
-            border: 3px solid black;
-            border-radius: 25%;
-            background-color: rgb(0, 61, 6);
-            color: white;
-            padding: 20px;
-        }
-        
-        hr {
-            width: 90%;
-            margin-top: 2%;
-            margin-bottom: 2%;
-        }
-    </style>
+    <!-- CSS links. -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/list-groups/">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/list-groups.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h2>Apps</h2>
+        <h1>Apps</h1>
     </header>
-    <hr>
+
     <main>
-        <a class="app_link" href="word_guesser/word_guesser.html"><b>Word Guesser</b></a>
-        <br>
-        <a class="app_link" href="lightshot_link_generator/LightShotImageViewer.html"><b>LightShot Link Generator</b></a>
-        <br>
+        <!-- Link To Wordle CLone. -->
+        <a style="text-decoration: none;" href=" word_guesser/word_guesser.html ">
+            <label class="list-group-item rounded-3 py-3 list-group gap-2 border-5 w-auto mt-5 mb-2 shadow " for="listGroupCheckableRadios1 ">
+                <b>Wordle Clone</b>
+                <span class="d-block">A JS clone of the Wordle game.</span>
+            </label>
+        </a>
+
+        <!-- Link To LightShot Link Generator. -->
+        <a style="text-decoration: none;" href="lightshot_link_generator/LightShotImageViewer.html">
+            <label class="list-group-item rounded-3 py-3 list-group gap-2 border-5 w-auto mt-5 mb-2 shadow " for="listGroupCheckableRadios1 ">
+                <b>LightShot Link Generator</b>
+                <span class="d-block">Click the button, see a random LightShot page.</span>
+            </label>
+        </a>
+
     </main>
-    <hr>
+
     <footer>
         <label>
             <b>By nfzohar</b>
         </label>
     </footer>
 
+    <!-- JS links. -->
+    <script src="./assets/js/bootstrap.bundle.min.js "></script>
 </body>
 
 </html>
