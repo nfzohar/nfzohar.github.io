@@ -9,13 +9,16 @@
         <!-- Tailwind CDN -->
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     </head>
-    <body onload="buildFromArray()">
-        <div class="w-full text-center p-1"><h1 class="text-5xl font-bold">
-            <span class="text-yellow-500">EMOJI:</span> Click&Paste</h1>
+    <body class="z-100" onload="buildFromArray()">
+        <span id="toast" class="sticky top-0 rounded-xl text-center p-5 font-semibold bg-gray-100 mx-5 opacity-70 z-1000">Emoji has been copied to your clipboard.</span>
+        
+        <div class="w-full text-center p-1">
+            <h1 class="text-5xl font-bold">
+                <span class="text-yellow-500">EMOJI: </span>Click&Paste
+            </h1>
         </div>
-        <div id="main" class="block m-auto w-10/12 p-5"></div>
 
-        <span onClick="copyToClipboard('emoji_' + emojiNumber)">
+        <div id="main" class="block m-auto w-10/12 p-5"></div>
     <script>
         let emojiNumber = 0;
         // Source: https://getemoji.com/
@@ -27,6 +30,7 @@
 
         function copyToClipboard(id) {
             navigator.clipboard.writeText(emojiList[id]);
+            showToast();
         }
 
         function buildCopyButton(emoji){
@@ -41,6 +45,17 @@
                 rendered+= buildCopyButton(emoji)
             });
             document.getElementById('main').innerHTML = rendered;
+
+            document.getElementById("toast").style.visibility = "hidden";
+        }
+
+        function showToast(){
+            var toast = document.getElementById("toast");
+            
+            toast.style.visibility = ""; ;
+            setTimeout(function() {
+                toast.style.visibility = "hidden";
+            }, 1000);
         }
 
    </script>
