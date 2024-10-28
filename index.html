@@ -2,67 +2,17 @@
 <html>
   <head>
     <title>nfzohar - App Access</title>
-
     <meta charset="utf-8" />
     <meta name="description" content="NFŽ" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
-    <div class="w-screen h-screen bg-gray-200">
-      <h1 class="block w-full text-center px-20 py-16 text-5xl font-semibold">
-        Apps
-      </h1>
-
-      <div id="main" class="block m-auto text-center w-96"></div>
-
-      <span class="block w-full mt-20 text-center m-auto">
-        By
-        <a
-          class="font-semibold underline text-blue-700"
-          target="_blank"
-          title="GitHub Link"
-          href="https://github.com/nfzohar"
-        >
-          nfzohar
-        </a>
-      </span>
-    </div>
-
-    <script lang="js">
-      let links = [{
-          title: "Freshdesk Ticket Dashboard",
-          description: "A universal ticket dashboard for Freshdesk API.",
-          url: "freshdesk-ticket-dashboard/",
-      }, {
-          title: "Wordle Clone",
-          description: "A JS clone of the Wordle game.",
-          url: "word-guesser/",
-      }, {
-          title: "LightShot Link Generator",
-          description: "Click the button, see a random LightShot page.",
-          url: "lightshot-link-generator",
-      }, {
-          title: "Emoji Click&Paste",
-          description: "Select and copy an emoji to clipboard.",
-          url: "emoji-click-paste/",
-      }, ];
-
-      links.forEach((link) => {
-          let aLink = '';
-
-          aLink += '<a href="' + link.url + '"'
-          aLink += 'class="block my-7 p-3 border w-full rounded-lg shadow-lg bg-white text-left"'
-          aLink += '>'
-          aLink += '<span class="block py-2 font-bold" >' + link.title + '</span>'
-          aLink += '<span class="block italic" >' + link.description + '</span>'
-          aLink += '</a>'
-
-          document.getElementById("main").innerHTML += aLink
-      });
-    </script>
+    <iframe
+      class="w-screen h-screen bg-gray-200"
+      src="https://my-dashboard-xi-ten.vercel.app/"
+      title="Sorry, the site is currently down..."
+    ></iframe>
   </body>
 </html>
